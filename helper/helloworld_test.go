@@ -34,6 +34,7 @@ func TestHelloWorldBudi(t *testing.T) {
 	fmt.Println("Test Hello World Budi Done")
 }
 
+//PAKE LIBRARY TESTIFY BUAT UNIT TEST
 func TestHelloWorldAssert(t *testing.T) {
 	result := HelloWorld("Aji")
 	assert.Equal(t, "Hello Aji", result, "Result nya harus nya Hai Aji")
@@ -47,6 +48,7 @@ func TestHelloWorldRequire(t *testing.T) {
 }
 
 func TestSkip(t *testing.T) {
+	//Buat kondisi spesifik jika pengen nge skip code unit tes bs pake skip()
 	if runtime.GOOS == "windows" {
 		t.Skip("Unit Test Gabisa Jalan di MAC OS")
 	}
