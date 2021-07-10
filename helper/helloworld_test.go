@@ -9,6 +9,19 @@ import (
 	"github.com/stretchr/testify/require"
 )
 
+func TestMain(m *testing.M) {
+	// UNTUK MENGATUR LIFE CYCLE TESTING
+
+	//CODE BEFORE EXECUTE UNIT TEST
+	fmt.Println("BEFORE UNIT TEST")
+
+	//EXECUTE ALL UNIT TEST ON PACKAGE
+	m.Run()
+
+	//CODE AFTER EXECUTE ALL UNIT TEST
+	fmt.Println("AFTER UNIT TEST")
+}
+
 func TestHelloWorldAji(t *testing.T) {
 	result := HelloWorld("Aji")
 	if result != "Hello Aji" {
